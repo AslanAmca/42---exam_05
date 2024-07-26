@@ -8,6 +8,8 @@ TargetGenerator::~TargetGenerator()
 {
 	for (map<string, ATarget *>::iterator it = targets.begin(); it != targets.end(); ++it)
 		delete it->second;
+
+	targets.clear();
 }
 
 void TargetGenerator::learnTargetType(ATarget *target)

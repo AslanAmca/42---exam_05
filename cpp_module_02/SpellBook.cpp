@@ -8,6 +8,8 @@ SpellBook::~SpellBook()
 {
 	for (map<string, ASpell *>::iterator it = book.begin(); it != book.end(); ++it)
 		delete it->second;
+
+	book.clear();
 }
 
 void SpellBook::learnSpell(ASpell *spell)
